@@ -3,7 +3,6 @@ class Api::V1::ItemsController < Api::V1::BaseController
     respond_with Item.all
   end
   def create
-    puts params
     respond_with :api, :v1, Item.create(item_params)
   end
   def destroy
