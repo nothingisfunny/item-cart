@@ -4,9 +4,7 @@ class AllItems extends React.Component {
     var items = this.props.items.map((item) => {
       return(
         <div key={item.id}>
-          <h3>{item.name}</h3>
-          <p>{item.description}</p>
-          <button onClick={() => this.props.handleDelete(item.id)}>Delete</button>
+          <Item item={item} handleDelete={this.props.handleDelete} handleUpdate={this.props.handleUpdate}/>
         </div>
       )
     })
