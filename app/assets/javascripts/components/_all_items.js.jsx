@@ -1,21 +1,6 @@
-class AllItems extends React.Component {
+const AllItems = (props) =>{
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: []
-    };
-  }
-
-  componentDidMount(){
-    fetch('/api/v1/items.json')
-      .then((response) => {return response.json()})
-      .then((data) => {this.setState({ items: data }) });
-  }
-
-  render(){
-    console.log(this.state)
-    var items = this.state.items.map((item) => {
+   var items = props.items.map((item) => {
       return(
         <div key={item.id}>
           <h3>{item.name}</h3>
@@ -29,5 +14,5 @@ class AllItems extends React.Component {
         {items}
       </div>
     )
-  }
+
 }

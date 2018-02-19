@@ -1,11 +1,8 @@
-
-class Main extends React.Component{
-  render(){
+const Main = (props) => {
     return(
       <div>
         <Header />
         <Body />
       </div>
     )
-  }
 }
